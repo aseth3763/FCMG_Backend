@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "bcbf2114-5afd-49c6-92ce-83f6a5465a43",
+		"name": "FCMG Database",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44659756",
+		"_collection_link": "https://akshayseth-1161480.postman.co/workspace/Akshay-Seth's-Workspace~cd75be00-8bb8-4a85-848b-0082070de990/collection/44659756-bcbf2114-5afd-49c6-92ce-83f6a5465a43?action=share&source=collection_link&creator=44659756"
+	},
+	"item": [
+		{
+			"name": "userRegister",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Gaurav Thakur\",\r\n    \"email\":\"gaurav3763@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"role\"  :\"customer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"gaurav3763@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/userLogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"userLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/getAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"India Gate Basmati Rice 5kg\",\r\n  \"price\": 450,\r\n  \"category\": \"Staples\",\r\n  \"stock\": 80\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/createProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProducts?page=1&limit=5",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/getProducts?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getProducts"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Aashirvaad Atta 5kg",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct/:id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aashirvaad Atta\",\r\n    \"price\" :250\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/updateProduct/6817a069e1d0b3205d2183e2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"updateProduct",
+						"6817a069e1d0b3205d2183e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProduct/:id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/deleteProduct/6817a069e1d0b3205d2183e2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"deleteProduct",
+						"6817a069e1d0b3205d2183e2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
