@@ -7,9 +7,17 @@ app.use(cors());
 app.use(express.json());
 require("./config/db");
 
+const userAuthRouter = require("./routes/authRoutes");
+const userRouter = require("./routes/userRoutes");
+const productRouter = require("./routes/productRoutes")
+
 app.get("/", (req, res) => {
   console.log("Welcome to homepage");
 });
+
+app.use("/api", userAuthRouter);
+app.use("/api", userRouter);
+app.use("/api", productRouter);
 
 app.listen(process.env.PORT || PORT, () => {
   console.log(`Server listenting on port : ${process.env.PORT}`);
