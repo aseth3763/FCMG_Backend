@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const cors = require("cors");
-const PORT = 5001;
 app.use(cors());
 app.use(express.json());
 require("./config/db");
@@ -22,6 +21,6 @@ app.use("/api", userAuthRouter);
 app.use("/api", userRouter);
 app.use("/api", productRouter);
 
-app.listen(process.env.PORT || PORT, () => {
-  console.log(`Server listenting on port : ${process.env.PORT}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server listening on port: ${process.env.PORT || 5000}`);
 });
