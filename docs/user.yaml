@@ -1,0 +1,11 @@
+paths:
+  /api/getAllUsers:
+    get:
+      tags: [Users]
+      summary: Get all users
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Success
+  
