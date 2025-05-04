@@ -14,6 +14,7 @@ const userRouter = require("./routes/userRoutes");
 const productRouter = require("./routes/productRoutes");
 
 app.get("/", (req, res) => {
+  res.send("Welcome to homepage")
   console.log("Welcome to homepage");
 });
 
