@@ -5,6 +5,7 @@ const cors = require("cors");
 const PORT = 5001;
 app.use(cors());
 app.use(express.json());
+require("./config/db");
 
 app.get("/", (req, res) => {
   console.log("Welcome to homepage");
@@ -13,5 +14,3 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT || PORT, () => {
   console.log(`Server listenting on port : ${process.env.PORT}`);
 });
-
-
